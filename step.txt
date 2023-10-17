@@ -1,0 +1,28 @@
+kubectl apply -f deployments/common/ns-and-sa.yaml
+
+kubectl apply -f deployments/rbac/rbac.yaml
+
+kubectl apply -f examples/shared-examples/default-server-secret/default-server-secret.yaml
+
+kubectl apply -f deployments/common/nginx-config.yaml
+
+kubectl apply -f deployments/common/ingress-class.yaml
+
+kubectl apply -f deployments/daemon-set/nginx-ingress.yaml
+
+# Custom resources
+
+kubectl apply -f deployments/common/crds/k8s.nginx.org_virtualservers.yaml
+
+kubectl apply -f deployments/common/crds/k8s.nginx.org_virtualserverroutes.yaml
+
+kubectl apply -f deployments/common/crds/k8s.nginx.org_transportservers.yaml
+
+kubectl apply -f deployments/common/crds/k8s.nginx.org_policies.yaml
+
+# My apply
+
+kubectl apply -f app-service.yaml
+
+kubectl apply -f app-ingress.yaml or kubectl apply -f app-ingress-ssl.yaml
+

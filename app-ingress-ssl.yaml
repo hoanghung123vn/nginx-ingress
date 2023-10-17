@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress-tls
+  namespace: nginx-ingress
+spec:
+  tls:
+  - hosts:
+      - hoanghung123vn.test
+    secretName: default-server-secret
+  rules:
+  - host: hoanghung123vn.test
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp
+            port:
+              number: 80
+  ingressClassName: nginx
