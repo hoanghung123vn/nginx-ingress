@@ -513,9 +513,9 @@ urllib3==1.26.15 \
     #   -r requirements.txt
     #   kubernetes
     #   requests
-websocket-client==1.6.3 \
-    --hash=sha256:3aad25d31284266bcfcfd1fd8a743f63282305a364b8d0948a43bd606acc652f \
-    --hash=sha256:6cfc30d051ebabb73a5fa246efdcc14c8fbebbd0330f8984ac3bb6d9edd2ad03
+websocket-client==1.7.0 \
+    --hash=sha256:10e511ea3a8c744631d3bd77e61eb17ed09304c413ad42cf6ddfa4c7787e8fe6 \
+    --hash=sha256:f4c3d22fec12a2461427a29957ff07d35098ee2d976d3ba244e688b8b4057588
     # via
     #   -r requirements.txt
     #   kubernetes
